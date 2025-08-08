@@ -1,0 +1,9 @@
+{
+  "apiKey": "YOUR_API_KEY",
+  "authDomain": "streeraksha.firebaseapp.com",
+  "databaseURL": "https://streeraksha.firebaseio.com",
+  "projectId": "streeraksha",
+  "storageBucket": "streeraksha.appspot.com",
+  "messagingSenderId": "123456789012",
+  "appId": "1:123456789012:web:abc123def456"
+}

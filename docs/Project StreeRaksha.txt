@@ -1,0 +1,72 @@
+StreeRaksha: AI & IoT-Powered Women Safety Analytics
+
+Executive Summary
+-----------------
+StreeRaksha is an innovative, AI-driven platform designed to proactively enhance women’s safety in public spaces. 
+By combining real-time computer vision, machine learning, and affordable IoT edge devices, StreeRaksha delivers instant threat detection and actionable alerts to authorities—empowering rapid, data-driven responses and smarter city safety management.
+
+The Problem
+-----------
+Despite widespread CCTV coverage, most surveillance systems are reactive—providing evidence only after an incident has occurred. 
+Women, especially in high-risk zones or during late hours, remain vulnerable due to delayed detection and response. 
+There is a critical need for a proactive, intelligent system that can identify threats in real time and enable immediate intervention.
+
+The Solution: StreeRaksha
+-------------------------
+StreeRaksha transforms public safety by deploying AI-powered analytics directly at the edge (using Raspberry Pi 5 devices) and integrating with a secure, real-time dashboard for authorities. 
+The platform’s core strengths:
+
+- Real-Time Threat Detection:
+  • Uses advanced computer vision (YOLO, MediaPipe, MobileNetV2) to analyze live CCTV feeds.
+  • Detects gender, crowd density, distress gestures, and abnormal movements.
+
+- Edge AI for Privacy & Speed:
+  • Raspberry Pi 5 nodes process video and sensor data locally, sending only relevant alerts and evidence to the cloud.
+  • Reduces bandwidth, preserves privacy, and ensures low-latency detection.
+
+- Authority Dashboard & Incident Management:
+  • Secure, dashboard for real-time alert visualization, live feed monitoring, and incident analytics.
+  • Interactive map displays incident locations and risk zones for rapid resource deployment.
+  • Comprehensive incident logging and analytics for pattern recognition and strategic planning.
+
+- Intelligent Alert System & Evidence Collection:
+  • Automated, multi-channel notifications (dashboard, push) for redundancy and reliability.
+  • Secure storage of image frames and sensor data as verifiable evidence.
+
+- Predictive Safety Analytics:
+  • Risk heatmaps and trend analysis help authorities identify high-risk zones and optimize patrols.
+  • Data-driven resource planning for smarter, safer cities.
+
+Why StreeRaksha is Different
+----------------------------
+- Proactive, Not Reactive: Detects and alerts in real time—enabling prevention, not just post-incident investigation.
+- Edge-First Architecture: Privacy-preserving, scalable, and cost-effective deployment using affordable Raspberry Pi 5 devices.
+- Designed for Authorities: Focused on empowering law enforcement and city agencies with actionable insights and rapid response tools.
+
+Technology Stack
+----------------
+- AI & Computer Vision: OpenCV, YOLO, MediaPipe, MobileNetV2
+- Edge Devices: Raspberry Pi 5 (Python, OpenCV, TensorFlow Lite)
+- Backend: FastAPI (Python), Supabase (PostgreSQL/PostGIS)
+- Real-Time Messaging: Redis Pub/Sub, MQTT, Supabase Realtime
+- Dashboard: React Node, Here Maps API
+- Notifications: Firebase Cloud Messaging (FCM), Twilio
+- Cloud & DevOps: Render (backend), Vercel (frontend), GitHub Actions (CI/CD)
+
+Impact & Benefits
+-----------------
+- Rapid, Data-Driven Response: Enables authorities to act before incidents escalate.
+- Scalable & Affordable: City-wide deployment at minimal cost using open-source and free-tier solutions.
+- Privacy & Compliance: Edge processing keeps sensitive data local, transmitting only essential information.
+- Continuous Improvement: Incident analytics and feedback loops drive smarter, safer cities over time.
+
+Roadmap
+-------
+- MVP: Deploy edge detection, real-time alerts, and authority dashboard.
+- Scale: Expand to more locations, integrate additional sensors, and refine AI models.
+- Future: Add public-facing mobile app for user SOS and reporting, Integrates environmental sensor data (sound) for context-aware alerts.
+
+Conclusion
+----------
+StreeRaksha is a transformative step toward safer public spaces for women. By harnessing the power of AI, IoT, and open-source innovation, 
+it empowers authorities to prevent incidents, respond rapidly, and build data-driven safety strategies—making cities safer, smarter, and more inclusive.

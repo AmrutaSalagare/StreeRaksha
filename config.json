@@ -1,0 +1,43 @@
+{
+    "version": "1.0.0",
+    "last_updated": "2025-07-05T00:16:03.034026",
+    "system": {
+        "debug_mode": false,
+        "save_evidence": true,
+        "evidence_quality": 95,
+        "log_level": "INFO"
+    },
+    "threading": {
+        "frame_queue_size": 1,
+        "result_queue_size": 1,
+        "upload_queue_size": 100,
+        "capture_thread_priority": "NORMAL",
+        "processing_thread_priority": "ABOVE_NORMAL",
+        "rendering_thread_priority": "NORMAL",
+        "upload_thread_priority": "BELOW_NORMAL",
+        "max_fps": 60
+    },
+    "detection": {
+        "model_confidence": 0.75,
+        "person_min_size": 60,
+        "nms_threshold": 0.4,
+        "track_expiration": 8,
+        "max_track_distance": 50
+    },
+    "camera": {
+        "index": 0,
+        "width": 416,
+        "height": 320,
+        "fps": 60
+    },
+    "processing": {
+        "skip_gender_detection": true,
+        "minimal_tracking": true,
+        "skip_pose_estimation": true,
+        "direct_rendering": true,
+        "zero_copy_mode": true,
+        "minimal_visualization": true,
+        "early_exit_detection": true,
+        "max_detections": 1
+    }
+}

@@ -1,0 +1,91 @@
+"""
+StreeRaksha Multi-Threading Architecture
+
+This diagram illustrates the multi-threading architecture of StreeRaksha.
+
+                                                     +-------------------+
+                                                     |                   |
+                                      +------------->| Firebase Manager  |
+                                      |              |                   |
+                                      |              +-------------------+
+                                      |                  |
+                                      |                  |
++------------------+     +-----------------+     +----------------+     +-----------------+
+|                  |     |                 |     |                |     |                 |
+| Frame Capture    |---->| Processing      |---->| Rendering      |     | Thread Health   |
+| Thread           |     | Thread          |     | Thread         |     | Monitor         |
+|                  |     |                 |     |                |     |                 |
++------------------+     +-----------------+     +----------------+     +-----------------+
+        |                        |                      |                       |
+        |                        |                      |                       |
+        v                        v                      v                       v
+  +-----------+          +-----------+           +-----------+          +----------------+
+  |           |          |           |           |           |          |                |
+  | Frame     |--------->| Result    |---------->| Display   |          | Performance    |
+  | Queue     |          | Queue     |           | Output    |          | Metrics        |
+  |           |          |           |           |           |          |                |
+  +-----------+          +-----------+           +-----------+          +----------------+
+
+Thread Information:
+------------------
+1. Frame Capture Thread:
+   - Captures frames from camera
+   - Applies FPS limiting if configured
+   - Uses priority queue to prioritize frames with motion
+
+2. Processing Thread:
+   - Performs object detection using YOLO
+   - Performs tracking and gender detection
+   - Analyzes poses with MediaPipe
+   - Uses adaptive processing to maintain performance
+
+3. Rendering Thread:
+   - Visualizes detection results
+   - Draws UI elements and statistics
+   - Handles alerts and evidence capture
+   - Displays output to screen
+
+4. Firebase Upload Thread:
+   - Handles uploading evidence to Firebase
+   - Manages incident and log uploading
+   - Uses retry logic for failed uploads
+
+5. Thread Health Monitor:
+   - Monitors performance of all threads
+   - Detects bottlenecks and resource issues
+   - Logs performance metrics and alerts
+
+Queue Information:
+----------------
+1. Frame Queue:
+   - Priority-based queue for camera frames
+   - Prioritizes frames with motion or activity
+   - Acts as buffer between capture and processing
+
+2. Result Queue:
+   - Priority-based queue for processed frames
+   - Prioritizes frames with detections
+   - Acts as buffer between processing and rendering
+
+3. Firebase Upload Queue:
+   - Priority-based queue for uploads
+   - Prioritizes critical evidence over routine logs
+   - Handles upload retries and error recovery
+
+Performance Optimizations:
+------------------------
+1. Adaptive Processing:
+   - Skips frames when falling behind
+   - Prioritizes important processing tasks
+   - Maintains consistent FPS even under load
+
+2. Priority-Based Scheduling:
+   - Critical frames processed first
+   - Motion detection used for prioritization
+   - Ensures important events are never missed
+
+3. Resource Management:
+   - Thread priority management on Windows
+   - Queue size monitoring and optimization
+   - Performance metrics collection and reporting
+"""
