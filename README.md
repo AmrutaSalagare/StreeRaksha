@@ -8,36 +8,6 @@ StreeRaksha is an AI and IoT-powered platform designed to enhance public safety 
 
 Women face unique safety challenges in public spaces, especially in high-risk areas or during late hours. Traditional surveillance systems are reactive and often fail to prevent incidents. StreeRaksha addresses this gap by using AI and IoT to detect threats in real-time and notify authorities instantly, enabling quicker interventions and empowering women with actionable safety information.
 
-## Project Structure
-
-The project is organized into modular components for better debugging and understanding:
-
-```
-StreeRaksha/
-├── main.py               # Main application entry point
-├── detector.py           # Core detector module (contains StreeRakshaDetector class)
-├── pose_analyzer.py      # Pose analysis functionality
-├── gender_detector.py    # Gender detection module
-├── tracker.py            # Person tracking module with periodic gender reclassification
-├── thread_manager.py     # Advanced multi-threading functionality with priority queues and adaptive processing
-├── thread_health_monitor.py # Thread health monitoring and performance analytics
-├── priority_queue.py    # Priority-based queues for efficient inter-thread communication
-├── config_manager.py    # Dynamic configuration management for threads
-├── firebase_manager.py   # Firebase integration for backend services
-├── alert_system.py       # Alert generation and risk assessment
-├── visualizer.py         # Visualization and UI rendering
-├── logger.py             # Logging functionality
-├── debugger.py           # Debug utilities
-├── reset_camera.py       # Camera reset utility
-├── firebase_config.json  # Firebase configuration (with .example template)
-├── requirements.txt      # Project dependencies
-├── yolov8n.pt            # YOLOv8 model file
-├── evidence/             # Saved evidence images and sensor data
-├── logs/                 # Application logs
-├── docs/                 # Documentation
-└── __pycache__/          # Python bytecode cache
-```
-
 ## Module Descriptions
 
 - **main.py**: Entry point for the application that coordinates all components
@@ -227,4 +197,5 @@ Unauthorized copying, modification, distribution, or use of this software is str
 - Vandana H
 - Amruta Salagare
 - Reem K
+
 
