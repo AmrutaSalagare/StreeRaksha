@@ -158,7 +158,7 @@ The system implements an advanced gender reclassification mechanism to improve a
 
 ```bash
 # Clone the repository
-git clone https://github.com/HemanthKumar-CS/StreeRaksha.git
+git clone https://github.com/AmrutaSalagare/StreeRaksha.git
 cd StreeRaksha
 
 # Create and activate virtual environment
@@ -227,3 +227,4 @@ Unauthorized copying, modification, distribution, or use of this software is str
 - Vandana H
 - Amruta Salagare
 - Reem K
+
